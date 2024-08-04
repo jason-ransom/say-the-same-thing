@@ -1,11 +1,19 @@
-import { test } from 'vitest';
-import { render } from '@testing-library/react'
+import {Mock, test, vi, expect} from 'vitest';
+import {render, waitFor} from '@testing-library/react'
 import Page from './page'
 
-test('renders home content', () => {
+global.fetch = vi.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(['Hello World']),
+    })
+) as Mock;
+
+test('renders home content', async () => {
   const { getByText } = render(<Page />)
 
-    getByText(/Hello World/i);
-    getByText(/Let's play say the same thing!/i);
+  await waitFor(() => {
+    expect(getByText(/Hello World/i)).toBeTruthy();
+    expect(getByText(/Let's play say the same thing!/i)).toBeTruthy();
+  });
 })
 

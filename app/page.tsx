@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import PromptCard from "@/components/PromptCard";
+import RandomWordGetter from "@/components/RandomWordGetter";
 
 export default function Home() {
   return (
@@ -7,9 +7,7 @@ export default function Home() {
           <div className={styles.description}>
               Let&apos;s play say the same thing!
           </div>
-        <PromptCard>
-            Hello World
-        </PromptCard>
+        <RandomWordGetter />
       </div>
   );
 }
