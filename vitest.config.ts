@@ -7,4 +7,14 @@ export default defineConfig({
         environment: 'jsdom',
         exclude: ['**/node_modules/**', '**/e2e-tests/**']
     },
+    resolve: {
+        alias: {
+            '@': '/'
+        }
+    },
+    css: {
+        modules: {
+            scopeBehaviour: 'local',
+        },
+    },
 })
