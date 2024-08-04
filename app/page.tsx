@@ -1,9 +1,12 @@
 import styles from "./page.module.css";
+import PromptCard from "@/components/PromptCard";
 
 export default function Home() {
   return (
       <div className={styles.container}>
-        Hello World
+        <PromptCard>
+            Hello World
+        </PromptCard>
       </div>
   );
 }
