@@ -1,4 +1,5 @@
 import {FC} from "react";
+import styles from './PromptCard.module.css';
 
 export type PromptCardProps = {
     children: string;
@@ -6,8 +7,8 @@ export type PromptCardProps = {
 
 const PromptCard: FC<PromptCardProps> = ({ children }) => {
     return (
-        <div>
-            <h1>{children}</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>{children}</h1>
         </div>
     );
 };
