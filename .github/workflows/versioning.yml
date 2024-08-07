@@ -1,0 +1,28 @@
+name: versioning
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  version_bump:
+    name: 'Check Push Version Bump'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout source code"
+        uses: actions/checkout@v4
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: "Automated Version Bump (Push)"
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          skip-tag:  'true'
+          minor-wording:  'minor,Minor,MINOR,add,Adds,ADD,ADDS,new,New,NEW,feat,Feat,FEAT,feature,Feature,FEATURE,features,Features,FEATURES'
+          major-wording:  'major,MAJOR,cut-major,Cut-Major,break,Break,BREAK,breaking,Breaking,BREAKING'
+          patch-wording:  'patch,Patch,PATCH,patches,Patches,PATCHES,fix,Fix,FIX,fixes,Fixes,FIXES'
+          rc-wording:     'RELEASE,alpha'
