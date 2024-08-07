@@ -1,10 +1,11 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, beforeEach, test, vi, Mock } from 'vitest';
 import RandomWordGetter from './RandomWordGetter';
+import {RandomWordResponse} from "@/types";
 
 global.fetch = vi.fn(() =>
   Promise.resolve({
-    json: () => Promise.resolve(['apple']),
+    json: () => Promise.resolve({ word: 'apple' } as RandomWordResponse),
   })
 ) as Mock;
 
