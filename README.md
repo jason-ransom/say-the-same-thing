@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Say The Same Thing
+**Say the Same Thing** is a delightful and quirky game that lets you find out how alike (or not) you and your friends are.
+Imagine this: you and a buddy are shown a random word and have 3 seconds to both think of the same *DIFFERENT* word.
 
-## Getting Started
+For example, you are shown the word "Forest". If both you and your friends say “Gump” you are on the same wavelength...
+but if someone shouts "Trees!", well... you might want to kick that friend from your group 😂.
+It’s a hilarious and creative way to get on the same wavelength as your buds.
+The game is all about those “aha!” moments when you and your friends finally sync up and say the same thing.
 
-First, run the development server:
+Try playing this online version with a group and watch the laughter ensue.
 
+## For Devs
+
+Install those packages:
+```bash
+npm install
+```
+
+Then run the dev server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
