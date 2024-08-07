@@ -1,3 +1,3 @@
-export type ErrorResponse = { error: string; }
+export type ErrorResponse = { error: string };
 
-export type RandomWordResponse = ErrorResponse | { word: string; }
+export type RandomWordResponse = ErrorResponse | { word: string };

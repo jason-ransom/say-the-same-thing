@@ -1,1 +1,1 @@
-export { default } from './random-word';
+export { default } from "./random-word";
