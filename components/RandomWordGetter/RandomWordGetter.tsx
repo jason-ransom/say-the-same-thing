@@ -1,6 +1,8 @@
 'use client'
 import  { FC, useState, useEffect } from 'react';
 import PromptCard from "@/components/PromptCard";
+import {INTERNAL_URLS} from "@/endpoints";
+import {RandomWordResponse} from "@/types";
 
 const RandomWordGetter: FC = () => {
   const [word, setWord] = useState<string>('');
@@ -8,9 +10,10 @@ const RandomWordGetter: FC = () => {
   useEffect(() => {
     const fetchWord = async () => {
       try {
-        const response = await fetch('https://random-word-api.herokuapp.com/word?number=1');
-        const data = await response.json();
-        setWord(data[0]);
+        const response = await fetch(INTERNAL_URLS.RANDOM_WORD);
+        const data = await response.json() as RandomWordResponse;
+
+        setWord('word' in data ? data.word : data.error);
       } catch (error) {
         setWord('error fetching the word')
       }
