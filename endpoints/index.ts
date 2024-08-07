@@ -1,9 +1,9 @@
 // External
 export const EXTERNAL_URLS = {
-    RANDOM_WORD: 'https://random-word-api.herokuapp.com/word?number=1'
+  RANDOM_WORD: 'https://random-word-api.herokuapp.com/word?number=1',
 };
 
 // Internal
 export const INTERNAL_URLS = {
-    RANDOM_WORD: '/api/random-word'
+  RANDOM_WORD: '/api/random-word',
 };

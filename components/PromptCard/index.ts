@@ -1,1 +1,1 @@
-export { default } from "./PromptCard";
+export { default } from './PromptCard';
