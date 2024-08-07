@@ -1,5 +1,5 @@
-import styles from "./page.module.css";
-import RandomWordGetter from "@/components/RandomWordGetter";
+import styles from './page.module.css';
+import RandomWordGetter from '@/components/RandomWordGetter';
 
 export default function Home() {
   return (

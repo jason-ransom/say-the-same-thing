@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styles from "./promptCard.module.css";
+import { FC } from 'react';
+import styles from './promptCard.module.css';
 
 export type PromptCardProps = {
   children: string;
