@@ -7,6 +7,8 @@ on:
 
 jobs:
   version_bump:
+    permissions:
+      contents: write
     name: 'Check Push Version Bump'
     runs-on: ubuntu-latest
     steps:
